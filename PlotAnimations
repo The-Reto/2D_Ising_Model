@@ -1,0 +1,64 @@
+set terminal gif animate delay 5
+set output 'system1-3.gif'
+set autoscale xfix
+set autoscale yfix
+set autoscale cbfix
+set size square
+set cbrange [-1:1]
+set palette defined (-1 "blue", 1 "yellow" )
+do for [i=1:999] { 
+  set title "Ising System at T = 1.3J\n{/*0.8Sweep: ".i."0}"
+  plot './animation/system1-3_'.i.'.dat' matrix with image
+}
+
+set terminal gif animate delay 5
+set output 'system1-9.gif'
+set autoscale xfix
+set autoscale yfix
+set autoscale cbfix
+set size square
+set cbrange [-1:1]
+set palette defined (-1 "blue", 1 "yellow" )
+do for [i=1:999] { 
+  set title "Ising System at T = 1.9J\n{/*0.8Sweep: ".i."0}"
+  plot './animation/system1-9_'.i.'.dat' matrix with image
+}
+
+set terminal gif animate delay 5
+set output 'system2-1.gif'
+set autoscale xfix
+set autoscale yfix
+set autoscale cbfix
+set size square
+set cbrange [-1:1]
+set palette defined (-1 "blue", 1 "yellow" )
+do for [i=1:999] { 
+  set title "Ising System at T = 2.1J\n{/*0.8Sweep: ".i."0}"
+  plot './animation/system2-1_'.i.'.dat' matrix with image
+}
+
+set terminal gif animate delay 5
+set output 'system2-4.gif'
+set autoscale xfix
+set autoscale yfix
+set autoscale cbfix
+set size square
+set cbrange [-1:1]
+set palette defined (-1 "blue", 1 "yellow" )
+do for [i=1:999] { 
+  set title "Ising System at T = 2.4J\n{/*0.8Sweep: ".i."0}"
+  plot './animation/system2-4_'.i.'.dat' matrix with image
+}
+
+set terminal gif animate delay 5
+set output 'system2-6.gif'
+set autoscale xfix
+set autoscale yfix
+set autoscale cbfix
+set size square
+set cbrange [-1:1]
+set palette defined (-1 "blue", 1 "yellow" )
+do for [i=1:999] { 
+  set title "Ising System at T = 2.6J\n{/*0.8Sweep: ".i."0}"
+  plot './animation/system2-6_'.i.'.dat' matrix with image
+}
